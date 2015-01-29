@@ -1,0 +1,8 @@
+1. Documentation - Knockout
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB4QFjAA&url=http%3A%2F%2Fknockoutjs.com%2Fdocumentation%2Fintroduction.html&ei=_UHKVKiSOMreoATJ-4KABg&usg=AFQjCNGVQU8jkK9QX41hzCME0C1iMpsVRQ&sig2=uWRFqkTeI6h_Is6fuMSf6g&bvm=bv.84607526,d.cGU
+2. jQuery.getJSON() | jQuery API Documentation
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0CB4QFjAA&url=http%3A%2F%2Fapi.jquery.com%2Fjquery.getjson%2F&ei=MELKVIuaFpLuoASJhoDwDw&usg=AFQjCNEB9qOPBeSVZLiVcekqkCXbTffRMA&sig2=V74foWgMD3uOMnptP1aMdA
+3. JavaScript | MDN - Mozilla Developer Network
+   https://developer.mozilla.org/en.../JavaScript
+4. Google maps API https://developers.google.com/maps/
+5. https://github.com/firzhugh/neighbourhood-map

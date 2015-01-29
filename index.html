@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Comatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Neighborhood Map Project</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places"></script>
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/knockout.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</head>
+	<body>
+		<div id="infoWindow" class="hide">
+			<h2 data-bind="text: name"></h2>
+			<!--<div id="img"><img class="media" data-bind="attr:{src: HTMLimage}"/></div>-->
+
+			<p>Phone: <span data-bind="text: contact"></span></p>
+			<p>Category: <span data-bind="text: category"></span></p>
+			<p>Address: <span data-bind="text: address"></span></p>
+			<p>Rating: <span data-bind="text: rating"></span></p>
+		</div>
+
+		<div id="full-screen">
+			<div id="myAddress" class="input-group input-group-lg">
+				<input id="myAdress_input" class="form-control" type="text" placeholder="Your location">
+			</div>
+			<div id="searchBox" class="input-group input-group-lg">
+				<input id="search_by" class="form-control" type="text" placeholder="Place type like gas, cinema or leave it empty">
+				<span class="input-group-btn">
+					<!--
+					<button type="clearTxt" class="btn btn-primary" data-bind="click: ">
+						<span class="glyphicon glyphicon-remove"></span>
+					</button>
+					-->
+					<button type="submit" class="btn btn-primary" data-bind="click: updatevenuesModel">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+
+			<!--
+
+			<div id="myAddress" class="input-group input-group-lg">
+			<input id="myAdress_input" class="search" type="search" placeholder="Place type like cinema"
+			data-bind="value: venue, valueUpdate: 'keyup'" autocomplete="off" required>
+			</div>
+			-->
+
+<button id="list_button" class="btn btn-lg btn-info"  data-toggle="collapse" href="#places_nearby" aria-expanded="false"  aria-control="places_nearby">
+	Places Nearby <span class="badge" data-bind="text: num_unread"></span>
+</button>
+
+<div id="places_nearby" class="collapse">
+	<div data-bind="if: if_shown">
+		<div data-bind="foreach: venuesModel">
+			<div id="each_place" data-bind="click: openInfoWindow">
+				  <hr>
+				  <h3 data-bind="text: name"></h3>
+
+  				<div id="img"><img class="media" data-bind="attr:{src: HTMLimage}"/></div>
+					<!--
+
+				http://nancyharmonjenkins.com/wp-content/plugins/nertworks-all-in-one-social-share-tools/images/no_image.png
+				<div id="img"><img class="media" src="http://nancyharmonjenkins.com/wp-content/plugins/nertworks-all-in-one-social-share-tools/images/no_image.png
+				"/></div>/></div>
+				<p>hello</p>
+				  -->
+
+				<p>Phone Number: <span data-bind="text: contact"></span></p>
+				<p>Address: <span data-bind="text: address"></span></p>
+				<p>Category: <span data-bind="text: category"></span></p>
+				<p>Verified: <span data-bind="text: verified"></span></p>
+				<p>Rating: <span data-bind="text: rating"></span></p>
+			</div>
+		</div>
+	</div>
+	<h3 data-bind="ifnot: if_shown">There is no result available now</h3>
+</div>
+</div>
+
+<div id="map-canvas"></div>
+</body>
+</html>
